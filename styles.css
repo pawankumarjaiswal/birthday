@@ -1,0 +1,92 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.subtext {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.balloons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.balloon:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: white;
+}
+
+.balloon.red {
+    background-color: #ff5f5f;
+    animation-delay: 0s;
+}
+
+.balloon.blue {
+    background-color: #5f9eff;
+    animation-delay: 1s;
+}
+
+.balloon.yellow {
+    background-color: #ffdd57;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
